@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Assets/Semantic-UI-CSS-master/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="Assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <title>Weather Dash</title>
 </head>
 <body>
-    
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+          <a id="headFont" class="active item"><span class="skyFont">Sky&nbsp</span>Blue</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="jumbotron" class="ui inverted vertical masthead center aligned segment"> 
+          
+        <div class="ui text container">
+            <h2>Search by City</h2>
+            <div class="ui search">
+                <div class="ui icon input">
+                  <input class="prompt" type="text" placeholder="Enter a city name...">
+                  <i class="search icon"></i>
+                </div>
+                <div class="results"></div>
+            </div>
+        </div>
+      </div>
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="Assets/Semantic-UI-CSS-master/semantic.min.js"></script>
+    <script src="Assets/logic.js"></script>
 </body>
 </html>

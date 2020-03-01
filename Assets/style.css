@@ -1,0 +1,75 @@
+#headFont {
+    font-family: 'Spartan';
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding-top: 24px;
+}
+
+.skyFont {
+    font-weight: 600;
+    color: rgb(255, 213, 158);
+}
+
+.ui.large.menu {
+    background-color: #3B94CC;
+
+}
+
+#jumbotron {
+    background-color: black;
+    min-height: 500px;
+    position: relative;
+    transition: .4s ease;
+}
+
+.ui.menu.fixed, .ui.menu.fixed .item:first-child, .ui.menu.fixed .item:last-child {
+    color: white;
+}
+
+.ui.text.container {
+    padding-top: 220px;
+    transition: .4s ease;
+}
+
+h2 {
+    font-family: "Spartan";
+    font-weight: 200;
+}
+
+.ui.search .prompt {
+    background-color: rgba(0, 0, 0, 0.541);
+    border-color: rgb(255, 255, 255);
+}
+
+.ui.search .prompt:focus {
+    background-color: rgba(0, 0, 0, 0.541);
+    border-color: white;
+}
+
+.ui.icon.input>input {
+    color: white;
+    font-family: "Spartan";
+    padding-top: 15px;
+}
+
+.ui.icon.input {
+    color: white;
+}
+
+body {
+    min-height: 1000px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    #jumbotron {
+        background-color: rgb(15, 44, 77);
+        min-height: 300px;
+        position: relative;
+        transition: .5s ease;
+    }
+    .ui.text.container {
+        padding-top: 120px;
+        transition: .4s ease;
+    }
+}
