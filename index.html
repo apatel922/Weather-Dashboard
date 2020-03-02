@@ -12,18 +12,18 @@
     <!-- Navbar -->
     <div class="ui large top fixed hidden menu">
         <div class="ui container">
-          <a id="headFont" class="active item">Blue&nbsp<span class="skyFont">Sky</span></a>
+          <a id="headFont" class="active item">Blue&nbsp<span class="skyFont">Skies</span></a>
         </div>
     </div>
 
     <!-- Search block -->
     <div id="jumbotron" class="ui inverted vertical masthead center aligned segment"> 
-        <div class="ui text container">
-            <h2>Search by Location</h2>
-            <div class="ui search">
+        <div id="" class="ui text container">
+            <h2 id="searchBy">Search by Location</h2>
+            <div id="textInput" class="ui search">
                 <div class="ui icon input">
-                  <input id="cityEntered" class="prompt" type="text" placeholder="Type & hit enter...">
-                  <i id="magGlass" class="search icon"></i>
+                  <input id="cityEntered" class="prompt" type="text" placeholder="Type and hit enter!">
+                  <!-- <i id="magGlass" class="search icon"></i> -->
                 </div>
                 <div class="results"></div>
             </div>
@@ -34,10 +34,12 @@
     <div id="returnContainer" class="ui vertical stripe segment">
         <div class="ui middle aligned stackable grid container">
           <div class="row">
-            <div class="six wide column">
-                <span id="htmlIcon" class="iconify" data-icon="" data-inline="false"></span>
-                <h3 class="ui header" id="htmlCondition">Condition</h3>
-                <h3 class="ui header" id="htmlDate">Date</h3>
+            <div id="htmlIconBlock" class="six wide column">
+                <span id="htmlOnLoadIcon" class="iconify" data-icon="ic:outline-location-on" data-inline="false"></span>
+                <!-- Display:none onLoad,  Unhide onEnter -->
+                <span id="htmlIcon" class="iconify" data-icon="et" data-inline="false"></span>
+                <h3 class="ui header" id="htmlCondition"></h3>
+                <h3 class="ui header" id="htmlDate"></h3>
 
               </div>
             <div class="eight wide right floated column">
@@ -45,11 +47,11 @@
 
                 <div class="block container">
                     <div class="ui divider"></div>
-                    <h1 class="ui header" id="htmlCity">City</h1>
+                    <h1 class="ui header" id="htmlCity">No Current Location</h1>
                     <div class="ui divider"></div>
-                    <h3 class="ui header">Temperature:&nbsp<span id="htmlTemp">Lorem</span></h3>
-                    <h3 class="ui header">Humidity:&nbsp<span id="htmlHumid">Lorem</span></h3>
-                    <h3 class="ui header">Wind Speed:&nbsp<span id="htmlWind">Lorem</span></h3>
+                    <h3 class="ui header fade">Temperature:&nbsp<span id="htmlTemp"></span></h3>
+                    <h3 class="ui header fade">Humidity:&nbsp<span id="htmlHumid"></span></h3>
+                    <h3 class="ui header fade">Wind Speed:&nbsp<span id="htmlWind"></span></h3>
                 </div>
 
 
@@ -57,9 +59,8 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
 
-      
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
     <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"

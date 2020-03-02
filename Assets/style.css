@@ -100,14 +100,30 @@ h3.ui.header span {
     text-align: center;
 }
 
-.iconify {
+#htmlOnLoadIcon {
+    height: 200px;
+    width: auto;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #c6cfd4;
+}
+
+#htmlIcon {
     height: 120px;
     width: auto;
     align-content: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    color: #44bbff;
+    color: #6cc9ff;
+}
+
+#htmlIcon,
+#htmlCondition,
+#htmlDate {
+    display: none;
 }
 
 @media only screen and (max-width: 920px) {
@@ -143,5 +159,8 @@ h3.ui.header span {
     h3.ui.header span {
         color: #44bbff;
         font-weight: 500;
+    }
+    #htmlOnLoadIcon {
+        height: 120px;
     }
 }

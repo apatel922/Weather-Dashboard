@@ -10,6 +10,17 @@ var cityID = "425378";
 // var AJAXbyCity = "http://api.openweathermap.org/data/2.5/weather?q=" + cityEntry + "&appid=" + APIkey;
 
 
+$(document).ready(function(){
+    $("#searchBy").hide(0).delay(300).fadeIn(500, "swing");
+    $("#textInput").hide(0).delay(400).fadeIn(500, "swing");
+    $("#htmlOnLoadIcon").hide(0).delay(1000).fadeIn(800, "swing");
+    $("#htmlCity").hide(0).delay(1000).fadeIn(800, "swing");
+    $(".ui.header.fade").hide(0).delay(1000).fadeIn(800, "swing");
+
+
+    $("#returnContainer").hide(0).delay(1100).slideDown(600, "swing");
+});
+
 $( "#cityEntered" ).keypress(function(e) {
     if(e.which == 13) {
         var cityEntry = $("#cityEntered").val(); 
@@ -27,6 +38,13 @@ $( "#cityEntered" ).keypress(function(e) {
             // Returns city name
             console.log(response);
             console.log(response.weather[0].main);
+
+            // Hide onLoadIcon & Show date, condition, & conditionIcon
+            $("#htmlOnLoadIcon").css("display", "none");
+            $("#htmlIcon").css("display", "block");
+            $("#htmlDate").css("display", "block");
+            $("#htmlCondition").css("display", "block");
+
             // City name to HTML
             $("#htmlCity").text(response.name);
             $("#htmlTemp").text(response.main.temp + "° F");
@@ -56,8 +74,8 @@ $( "#cityEntered" ).keypress(function(e) {
                 dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-sunny");
             }
-
         });
+
 
         // Today's date to HTML
         var todaysDate = new Date();
@@ -67,7 +85,7 @@ $( "#cityEntered" ).keypress(function(e) {
         // console.log(month, day, year);
         $("#htmlDate").text(month + " / " + day + " / " + year);
     }
-  });
+});
 
 
 
