@@ -9,28 +9,58 @@
     <title>Weather Dash</title>
 </head>
 <body>
+    <!-- Navbar -->
     <div class="ui large top fixed hidden menu">
         <div class="ui container">
-          <a id="headFont" class="active item"><span class="skyFont">Sky&nbsp</span>Blue</a>
-          </div>
+          <a id="headFont" class="active item">Blue&nbsp<span class="skyFont">Sky</span></a>
         </div>
-      </div>
+    </div>
 
-      <div id="jumbotron" class="ui inverted vertical masthead center aligned segment"> 
-          
+    <!-- Search block -->
+    <div id="jumbotron" class="ui inverted vertical masthead center aligned segment"> 
         <div class="ui text container">
-            <h2>Search by City</h2>
+            <h2>Search by Location</h2>
             <div class="ui search">
                 <div class="ui icon input">
-                  <input class="prompt" type="text" placeholder="Enter a city name...">
-                  <i class="search icon"></i>
+                  <input id="cityEntered" class="prompt" type="text" placeholder="Type & hit enter...">
+                  <i id="magGlass" class="search icon"></i>
                 </div>
                 <div class="results"></div>
             </div>
         </div>
+    </div>
+
+    <!-- Return block (Empty container) -->
+    <div id="returnContainer" class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+          <div class="row">
+            <div class="six wide column">
+                <span id="htmlIcon" class="iconify" data-icon="" data-inline="false"></span>
+                <h3 class="ui header" id="htmlCondition">Condition</h3>
+                <h3 class="ui header" id="htmlDate">Date</h3>
+
+              </div>
+            <div class="eight wide right floated column">
+
+
+                <div class="block container">
+                    <div class="ui divider"></div>
+                    <h1 class="ui header" id="htmlCity">City</h1>
+                    <div class="ui divider"></div>
+                    <h3 class="ui header">Temperature:&nbsp<span id="htmlTemp">Lorem</span></h3>
+                    <h3 class="ui header">Humidity:&nbsp<span id="htmlHumid">Lorem</span></h3>
+                    <h3 class="ui header">Wind Speed:&nbsp<span id="htmlWind">Lorem</span></h3>
+                </div>
+
+
+
+            </div>
+          </div>
+        </div>
       </div>
 
-
+      
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
     <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
