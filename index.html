@@ -6,13 +6,14 @@
     <link rel="stylesheet" type="text/css" href="Assets/Semantic-UI-CSS-master/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="Assets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
     <title>Weather Dash</title>
 </head>
 <body>
     <!-- Navbar -->
     <div class="ui large top fixed hidden menu">
         <div class="ui container">
-          <a id="headFont" class="active item">Blue&nbsp<span class="skyFont">Skies</span></a>
+          <a id="headFont" href="index.html" class="active item">Blue&nbsp<span class="skyFont">Skies</span></a>
         </div>
     </div>
 
@@ -27,6 +28,7 @@
                 </div>
                 <div class="results"></div>
             </div>
+            <div id="errorMsg"></div>
         </div>
     </div>
 
@@ -61,7 +63,6 @@
         </div>
     </div>
 
-    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
     <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="

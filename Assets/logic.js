@@ -13,27 +13,50 @@ var cityID = "425378";
 $(document).ready(function(){
     $("#searchBy").hide(0).delay(300).fadeIn(500, "swing");
     $("#textInput").hide(0).delay(400).fadeIn(500, "swing");
-    $("#htmlOnLoadIcon").hide(0).delay(1000).fadeIn(800, "swing");
-    $("#htmlCity").hide(0).delay(1000).fadeIn(800, "swing");
-    $(".ui.header.fade").hide(0).delay(1000).fadeIn(800, "swing");
-
-
+    $("#htmlOnLoadIcon").hide(0).delay(1100).fadeIn(800, "swing");
+    $("#htmlCity").hide(0).delay(1100).fadeIn(800, "swing");
+    $(".ui.header.fade").hide(0).delay(1100).fadeIn(800, "swing");
     $("#returnContainer").hide(0).delay(1100).slideDown(600, "swing");
 });
 
 $( "#cityEntered" ).keypress(function(e) {
     if(e.which == 13) {
         var cityEntry = $("#cityEntered").val(); 
-        //console.log("City Entered: " + cityEntry);
+        // console.log("City Entered: " + cityEntry);
 
         // Use AJAX to hook into API & retrieve data in JSON format
         var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityEntry + "&units=imperial&appid=" + APIkey;
         // api.openweathermap.org/data/2.5/weather?q=London&units=imperial
 
+
+
+        // $.ajax({
+        //     url: queryURL,
+        //     method: "GET"
+        // })
+
+
         $.ajax({
             url: queryURL,
-            method: "GET"
-        })
+            method: "GET",
+            success: 
+                function () {
+                    console.log("City!");
+                    $("#errorMsg").text("");
+                    $("#errorMsg").hide(0).delay(50).fadeOut(100, "swing");
+                },
+                statusCode: {
+                    404: function() {
+                        console.log("Not a City");
+                        $("#errorMsg").text("Try another location");
+                        $("#errorMsg").hide(0).delay(50).fadeIn(200, "swing");
+                    }
+                }
+            })
+
+
+
+
         .then(function(response) {
             // Returns city name
             console.log(response);

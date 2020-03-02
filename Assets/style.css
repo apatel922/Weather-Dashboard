@@ -10,6 +10,12 @@
     color: #44bbff;
 }
 
+#errorMsg {
+    color: rgb(204, 80, 80);
+    padding-top: 14px;
+    font-size: 18px;
+}
+
 .ui.large.menu {
     background-color: #091a2e;
     border-bottom: 1px solid rgba(255, 255, 255, 0.438);
