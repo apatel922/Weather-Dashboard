@@ -38,22 +38,26 @@ $( "#cityEntered" ).keypress(function(e) {
             // Image based on weather conditions
             var dataIcon = $("#htmlIcon");
             if (response.weather[0].main == "Rain") {
+                dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-rain");
             } else if (response.weather[0].main == "Thunderstorm") {
+                dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-storm-showers");
             } else if (response.weather[0].main == "Drizzle") {
+                dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-rain-mix");
             } else if (response.weather[0].main == "Snow") {
+                dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-snow");
             } else if (response.weather[0].main == "Clouds") {
+                dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-cloudy");
             } else {
+                dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-sunny");
             }
 
         });
-
-
 
         // Today's date to HTML
         var todaysDate = new Date();
