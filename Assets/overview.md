@@ -7,7 +7,7 @@
 ---
 <br>
 
-## Generating the HTML
+## OpenWeather API Setup
 
 It's pretty tough trying to organize a page's layout without planning before-hand.  This goes extra when trying to generate a page via code, rather than actually writing out the HTML.
 

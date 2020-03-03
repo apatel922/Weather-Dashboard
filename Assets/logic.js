@@ -25,7 +25,7 @@ $( "#cityEntered" ).keypress(function(e) {
         // console.log("City Entered: " + cityEntry);
 
         // Use AJAX to hook into API & retrieve data in JSON format
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityEntry + "&units=imperial&appid=" + APIkey;
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityEntry + "&units=imperial&appid=" + APIkey;
         // api.openweathermap.org/data/2.5/weather?q=London&units=imperial
 
 
