@@ -30,26 +30,19 @@ $( "#cityEntered" ).keypress(function(e) {
 
 
 
-        // $.ajax({
-        //     url: queryURL,
-        //     method: "GET"
-        // })
-
-
         $.ajax({
             url: queryURL,
             method: "GET",
             success: 
                 function () {
                     console.log("City!");
-                    $("#errorMsg").text("");
-                    $("#errorMsg").hide(0).delay(50).fadeOut(100, "swing");
+                    $("#errorMsg").delay(50).fadeOut(100, "swing");
                 },
                 statusCode: {
                     404: function() {
                         console.log("Not a City");
                         $("#errorMsg").text("Try another location");
-                        $("#errorMsg").hide(0).delay(50).fadeIn(200, "swing");
+                        $("#errorMsg").hide(0).delay(50).fadeIn(250, "swing");
                     }
                 }
             })
@@ -68,7 +61,7 @@ $( "#cityEntered" ).keypress(function(e) {
             $("#htmlDate").css("display", "block");
             $("#htmlCondition").css("display", "block");
 
-            // City name to HTML
+            // City info to HTML
             $("#htmlCity").text(response.name);
             $("#htmlTemp").text(response.main.temp + "° F");
             $("#htmlHumid").text(response.main.humidity + " RH");
@@ -78,19 +71,19 @@ $( "#cityEntered" ).keypress(function(e) {
 
             // Image based on weather conditions
             var dataIcon = $("#htmlIcon");
-            if (response.weather[0].main == "Rain") {
+            if (response.weather[0].main === "Rain") {
                 dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-rain");
-            } else if (response.weather[0].main == "Thunderstorm") {
+            } else if (response.weather[0].main === "Thunderstorm") {
                 dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-storm-showers");
-            } else if (response.weather[0].main == "Drizzle") {
+            } else if (response.weather[0].main === "Drizzle") {
                 dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-rain-mix");
-            } else if (response.weather[0].main == "Snow") {
+            } else if (response.weather[0].main === "Snow") {
                 dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-snow");
-            } else if (response.weather[0].main == "Clouds") {
+            } else if (response.weather[0].main === "Clouds") {
                 dataIcon.removeAttr();
                 dataIcon.attr("data-icon", "wi:day-cloudy");
             } else {
