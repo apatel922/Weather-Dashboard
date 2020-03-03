@@ -19,8 +19,8 @@ $(document).ready(function(){
     $("#returnContainer").hide(0).delay(1100).slideDown(600, "swing");
 });
 
-$( "#cityEntered" ).keypress(function(e) {
-    if(e.which == 13) {
+$( "#cityEntered" ).keypress(function(x) {
+    if(x.which == 13) {
         var cityEntry = $("#cityEntered").val(); 
         // console.log("City Entered: " + cityEntry);
 
@@ -46,9 +46,6 @@ $( "#cityEntered" ).keypress(function(e) {
                     }
                 }
             })
-
-
-
 
         .then(function(response) {
             // Returns city name
